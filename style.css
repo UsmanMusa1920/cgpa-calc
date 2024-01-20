@@ -426,7 +426,7 @@ body{
   }
 }
 
-#cgpa_or_gpa_div, #data_store, #grade_point_div, #get_no_courses, #calc_div, #result_div, .guide{
+#cgpa_or_gpa_div, #data_store, #grade_point_div, #get_no_courses, #calc_div, #result_div, .guide, .f_main{
   display: none;
 }
 

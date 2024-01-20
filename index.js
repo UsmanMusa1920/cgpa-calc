@@ -128,6 +128,7 @@ function course_range(){
                 new_selection_div.appendChild(arrayDiv1[i]);
             };
 
+            // next form
             document.querySelector('#get_no_courses').style.display = 'none';
             document.querySelector('#calc_div').style.display = 'flex';
         }
@@ -219,7 +220,7 @@ function calc(){
             curr_untd = 0;
         }
         else if (is_cgpa == 'CGPA'){
-            // getting previous stuffs (CGPA and registered credit unit)
+            // getting previous stuffs (CGPA and registered credit unit), also converting them to numbers
             curr_gptd = Number(document.querySelector('.curr_cgpa').value);
             curr_untd = Number(document.querySelector('.curr_credits').value);
 
@@ -233,7 +234,10 @@ function calc(){
 
         // summing up grade points and credit units
         for (i = 0; i < grade_points.length; i++){
+            // incrementing grade points
             weighted_grade_point += grade_points[i];
+
+            // incrementing credit units
             registered_credit_units += total_credit_units[i];
         };
 
@@ -329,6 +333,7 @@ function restart(){
         e.style.borderBottom = 'solid lightgrey 3px';
     });
 
+    // catching all previous courses div (if previously try to do, but suddenly press reset button), so it will remove them, if not in the next calculation it will include the previous data in account
     rem_coses = document.querySelectorAll('.course');
 
     // removing all previous courses datas (code, credit unit, and grade) fields
@@ -354,6 +359,32 @@ function guide(){
 
     document.querySelector('.main').style.display = 'none';
     document.querySelector('.guide').style.display = 'block';
+
+    // getting all head anchor tag, and remove them using the for-each loop below
+    a = document.querySelectorAll('.container .header div a');
+    
+    a.forEach( e => {
+        e.remove();
+    });
+
+    // creating new anchor tag elements after being removing all above
+    x = document.createElement('a');
+    y = document.createElement('a');
+    z = document.createElement('a');
+
+    x.innerHTML = '<a  onclick="main()" class="h_link_sm">Main</a>';
+    y.innerHTML = '<a  onclick="main()" class="h_link">Main</a>';
+    z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
+    
+    // div to append them (anchor tags)
+    b = document.querySelector('.container .header div');
+
+    b.appendChild(x);
+    b.appendChild(y);
+    b.appendChild(z);
+
+    document.querySelector('.f_guide').style.display = 'none';
+    document.querySelector('.f_main').style.display = 'inline';
 }
 
 
@@ -362,6 +393,32 @@ function main(){
     
     document.querySelector('.main').style.display = 'block';
     document.querySelector('.guide').style.display = 'none';
+
+    // getting all head anchor tag, and remove them using the for-each loop below
+    a = document.querySelectorAll('.container .header div a');
+
+    a.forEach( e => {
+        e.remove();
+    });
+
+    // creating new anchor tag elements after being removing all above
+    x = document.createElement('a');
+    y = document.createElement('a');
+    z = document.createElement('a');
+
+    x.innerHTML = '<a  onclick="guide()" class="h_link_sm">Guide</a>';
+    y.innerHTML = '<a  onclick="guide()" class="h_link">Guide</a>';
+    z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
+    
+    // div to append them (anchor tags)
+    b = document.querySelector('.container .header div');
+    
+    b.appendChild(x);
+    b.appendChild(y);
+    b.appendChild(z);
+
+    document.querySelector('.f_guide').style.display = 'inline';
+    document.querySelector('.f_main').style.display = 'none';
 }
 
 
