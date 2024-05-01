@@ -381,7 +381,7 @@ function guide(){
     x.innerHTML = '<a  onclick="main()" class="h_link_sm">Main</a>';
     y.innerHTML = '<a  onclick="main()" class="h_link">Main</a>';
     z.innerHTML = '<a href="#" class="h_link">Developer</a>';
-    // z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
+    z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
     
     // div to append them (anchor tags)
     b = document.querySelector('.container .header div');
@@ -416,7 +416,7 @@ function main(){
     x.innerHTML = '<a  onclick="guide()" class="h_link_sm">Guide</a>';
     y.innerHTML = '<a  onclick="guide()" class="h_link">Guide</a>';
     z.innerHTML = '<a href="#" class="h_link">Developer</a>';
-    // z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
+    z.innerHTML = '<a href="https://usmanmusa1920.github.io" class="h_link">Developer</a>';
     
     // div to append them (anchor tags)
     b = document.querySelector('.container .header div');
