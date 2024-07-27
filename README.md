@@ -1,10 +1,13 @@
-## FUGUS GPA/CGPA Calculator
+# FUGUS GPA/CGPA Calculator
+
+> **Note**
+> The directory in this repository called `calc` is the version of the `cgpa-calc` developed using node-js, and it have it own `README.md` file.
 
 The FUGUS GPA/CGPA Calculator is a valuable tool for every FUGUS student seeking to monitor their academic performance accurately. Understanding how to calculate your CGPA manually is crucial, but utilizing the CGPA calculator streamlines the process and provides you with instant results. Make the most of this convenient tool to track your progress, set goals, and stay motivated on your journey toward academic success at the Federal University Gusau.
 
 As a student at the Federal University Gusau (FUGUS), calculating your Cumulative Grade Point Average (CGPA) is essential for tracking your academic progress and determining your level of achievement. The FUGUS GPA/CGPA is a representation of your overall performance throughout your academic journey. We will explore the importance of CGPA, how it is calculated at FUGUS, and introduce a convenient CGPA calculator to help you navigate your academic success.
 
-## Understanding The Difference Between GP, CGP & CGPA
+# Understanding The Difference Between GP, CGP & CGPA
 
 Grades, Grade Point Average (GPA), and Cumulative Grade Point Average (CGPA) are all related to academic performance and are commonly used in educational institutions to assess a student's achievements. However, there are distinct differences between these terms. Let's explore each one:
 
@@ -16,13 +19,13 @@ Grades, Grade Point Average (GPA), and Cumulative Grade Point Average (CGPA) are
 
 In summary, GP refers to the numerical values assigned to individual grades, GPA represents the average performance for a specific period, and CGPA reflects the cumulative average of grades earned over an entire academic program. Understanding these distinctions is important for students to track their progress accurately and for institutions to evaluate academic performance consistently.
 
-## CGPA at FUGUS
+# CGPA at FUGUS
 
 The Cumulative Grade Point Average (CGPA) is a numerical representation of your academic performance at FUGUS. It is calculated based on the grades you receive in each course over the duration of your studies. The CGPA scale at FUGUS ranges from 0.00 to 5.00.
 
 Each course at FUGUS is assigned a specific number of credit units, which represent the weight or value of the course. The credit units reflect the amount of time and effort required to complete the course successfully. Grades are assigned to each course based on your performance, and these grades are then used to calculate your CGPA.
 
-## Calculating CGPA at FUGUS
+# Calculating CGPA at FUGUS
 
 To calculate your CGPA at FUGUS, you need to follow these steps:
 
@@ -46,13 +49,13 @@ F        0.00    0-39.99
 
 5. Calculate CGPA: Divide the sum of grade points by the total credit units earned. The result is your CGPA.
 
-## Introducing the FUGUS GPA/CGPA Calculator
+# Introducing the FUGUS GPA/CGPA Calculator
 
 Calculating your CGPA manually can be time-consuming and prone to errors. To simplify the process, we have developed the FUGUS GPA/CGPA Calculator, an online tool that automates the calculation for you.
 
 The FUGUS GPA/CGPA Calculator is a user-friendly tool that allows you to input your grades and credit units for each course. It performs the necessary calculations instantly, providing you with an accurate CGPA.
 
-## Benefits of the FUGUS GPA/CGPA Calculator
+# Benefits of the FUGUS GPA/CGPA Calculator
 
 1. Time-saving: The CGPA calculator eliminates the need for manual calculations, saving you valuable time and effort. With just a few clicks, you can obtain your CGPA instantly.
 
