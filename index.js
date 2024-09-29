@@ -329,7 +329,7 @@ function restart(){
     /** Function that help to restart fresh calculation */
     
     // all inputed tags
-    fields = document.querySelectorAll('.num_courses, .curr_cgpa, .curr_credits');
+    fields = document.querySelectorAll('.num_courses, .curr_cgpa, .curr_credits, .points, .know_cgpa_or_gpa');
 
     // making all the above input fields to be empty
     fields.forEach( e => {
@@ -357,6 +357,78 @@ function restart(){
     document.querySelector('#get_no_courses').style.display = 'none';
     document.querySelector('#calc_div').style.display = 'none';
     document.querySelector('#result_div').style.display = 'none';
+    document.querySelector('#know_my_degree_class').style.display = 'none';
+    document.querySelector('#result_know_div').style.display = 'none';
+}
+
+
+function know_degree_classification(){
+    /** Function for knowing degree classification */
+
+    document.querySelector('#cgpa_or_gpa_div').style.display = 'none';
+    document.querySelector('#know_my_degree_class').style.display = 'flex';
+}
+
+
+function get_know_degree_classification(){
+    /** Function for getting knowing degree classification */
+
+    fields_req = document.querySelectorAll('.points, .know_cgpa_or_gpa');
+
+    // checking if all fields are not empty
+    fields_req.forEach(e => {
+        if (e.value == '' || e.value == null || e.value == false || Number(e.value) < 1){
+            e.style.border = 'solid red 3px';
+            d_store.push(false);
+        }
+        else{
+            e.style.border = 'none';
+            e.style.borderTop = 'solid lightgrey 3px';
+            e.style.borderBottom = 'solid lightgrey 3px';
+        };
+    });
+
+    document.querySelector('#know_my_degree_class').style.display = 'none';
+    document.querySelector('#result_know_div').style.display = 'flex';
+
+    // capturing points value
+    know_result = Number(document.querySelector('.points').value);
+    know_cgpa_or_gpa = document.querySelector('.know_cgpa_or_gpa').value;
+
+    // get classification
+    if (know_result >= 4.5 && know_result <= 5){
+        classification = 'First Class';
+    }
+    else if (know_result >= 3.5 && know_result <= 4.49){
+        classification = 'Second Class Honours';
+    }
+    else if (know_result >= 2.4 && know_result <= 3.49){
+        classification = 'Second Class Lower';
+    }
+    else if (know_result >= 1.5 && know_result <= 2.39){
+        classification = 'Third Class';
+    }
+    else if (know_result >= 1.0 && know_result <= 1.49){
+        classification = 'Pass';
+    }
+    else if (know_result >= 0 && know_result <= 0.99){
+        classification = 'Failed';
+    }
+    else{
+        classification = `Un-believable ${is_cgpa} result: ${know_result}`;
+    };
+
+    // supply
+    document.querySelector('#result_know_div .result_span h1 .calc_cat').textContent = know_cgpa_or_gpa;
+    document.querySelector('#result_know_div .result_span p .calc_cat').textContent = know_cgpa_or_gpa;
+    document.querySelector('#result_know_div .result_span p b #result_value').textContent = know_result;
+    document.querySelector('#result_know_div .result_span p b #certificate').textContent = classification;
+
+    // calculation illustration
+    cal_illustration();
+
+    // removing calculation illustration
+    setTimeout(disappear_illustration, 1000);
 }
 
 

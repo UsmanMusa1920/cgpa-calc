@@ -365,14 +365,14 @@ body{
   width: 100%;
 }
 
-.course_head, .course{
+.course_head, .course, .know_select{
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin: 5px 0;
 }
 
-.course_head .one, .course .code{
+.course_head .one, .course .code, .know_select{
   width: 50%;
   border-radius: 10px;
   padding: 5px;
@@ -380,14 +380,18 @@ body{
   outline: none;
 }
 
-.course_head p, .course select{
+.course_head p, .course select, .know_select select{
   width: 20%;
   border-radius: 10px;
   border: none;
   outline: none;
 }
 
-.num_courses, .curr_cgpa, .curr_credits, .course select, .course .code{
+.know_select select{
+  width: 100%;
+}
+
+.num_courses, .curr_cgpa, .curr_credits, .course select, .course .code, .points, .know_select select{
   border-top: solid lightgrey 3px;
   border-bottom: solid lightgrey 3px;
 }
@@ -401,7 +405,7 @@ body{
   margin-bottom: 10px;
 }
 
-.GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits{
+.GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits, .points{
   width: 70%;
   height: 33px;
   padding: 0 10px;
@@ -415,18 +419,18 @@ body{
 }
 
 @media only screen and (max-width: 700px){
-  .GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits{
+  .GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits, .points{
     width: 90%;
   }
 }
 
 @media only screen and (max-width: 1050px){
-  .GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits{
+  .GPA_CGPA, .grade_points, .num_courses, .curr_cgpa, .curr_credits, .points{
     width: 90%;
   }
 }
 
-#cgpa_or_gpa_div, #data_store, #grade_point_div, #get_no_courses, #calc_div, #result_div, .guide, .f_main{
+#cgpa_or_gpa_div, #data_store, #grade_point_div, #get_no_courses, #know_my_degree_class, #result_know_div, #calc_div, #result_div, .guide, .f_main{
   display: none;
 }
 

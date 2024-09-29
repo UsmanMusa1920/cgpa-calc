@@ -44,3 +44,15 @@ To run the app on terminal
 ```sh
 nodemon run.js
 ```
+
+# Continue of cloning
+
+```sh
+cd cgpa-calc/calc && npm install
+```
+
+```sh
+nodemon run.js
+```
+
+Then visit: <a href="http://localhost:3000">http://localhost:3000</a>

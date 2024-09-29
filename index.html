@@ -66,7 +66,7 @@
         </div>
       </div>
 
-      <!-- gpa or cgpa -->
+      <!-- gpa or cgpa or now -->
       <div class="form" id="cgpa_or_gpa_div">
         <div class="form_in">
           <h1>GPA/CGPA CALCULATOR</h1>
@@ -76,6 +76,8 @@
           <button type="button" class="gpa" onclick="gpa_or_cgpa('GPA')">GPA</button>
           <br>
           <button type="button" class="cgpa" onclick="gpa_or_cgpa('CGPA')">CGPA</button>
+          <br>
+          <button type="button" class="know" onclick="know_degree_classification()">Know My Degree Class</button>
         </div>
       </div>
 
@@ -102,6 +104,27 @@
           <input type="number" class="curr_credits" value="" placeholder="Current credit units you completed" min="1">
           <br>
           <button type="submit" onclick="course_range()">PROCEED</button>
+          <br>
+          <button type="submit" class="restart_btn" onclick="restart()">RE-START</button>
+          <br>
+        </div>
+      </div>
+
+      <!-- Know My Degree Class -->
+      <div class="form" id="know_my_degree_class">
+        <div class="form_in">
+          <h1><span class="calc_cat">Know My Degree Class</span> Retriever</h1>
+          <br>
+          <input type="number" class="points" value="" placeholder="Enter Your CGPA/GPA Points e.g 3.19" min="1">
+          <div class="know_select">
+            <select name="" class="know_cgpa_or_gpa">
+              <option value="" selected>Select CGPA/GPA</option>
+              <option value="GPA">GPA</option>
+              <option value="CGPA">CGPA</option>
+            </select>
+          </div>
+          <br>
+          <button type="submit" onclick="get_know_degree_classification()">RETRIEVE</button>
           <br>
           <button type="submit" class="restart_btn" onclick="restart()">RE-START</button>
           <br>
@@ -142,6 +165,23 @@
             <p>Total credit units registered: <b><span id="registered_credit_units"></span></b></p>
             <p>Total weighted grade point: <b><span id="weighted_grade_point"></span></b></p>
             <p>Your <span class="calc_cat"></span>: <b><span id="result_value"></span></b></p>
+            <p>Classification: <b><span id="certificate"></span></b></p>
+            <br>
+            <button type="submit" class="restart_btn" onclick="restart()">RE-START</button>
+          </span>
+        </div>
+      </div>
+
+      <!-- know classification -->
+      <div class="form" id="result_know_div">
+        <div class="form_in">
+          <div class="back_img">
+            <img src="logo.png" alt="FUGUS logo">
+          </div>
+          <span class="result_span">
+            <h1>Your <span class="calc_cat"></span> Point Class</h1>
+            <br>
+            <p>Your Total <span class="calc_cat"></span> Points: <b><span id="result_value"></span></b></p>
             <p>Classification: <b><span id="certificate"></span></b></p>
             <br>
             <button type="submit" class="restart_btn" onclick="restart()">RE-START</button>
@@ -288,7 +328,7 @@
         <a href="https://usmanmusa1920.github.io">Developer</a>
         <br>
         <br>
-        <p>All rights reserved &copy; <span id="this_year"></span></p>
+        <p>All rights reserved &copy; 2024 - <span id="this_year"></span></p>
       </div>
       <br>
     </div>
