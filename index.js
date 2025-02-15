@@ -121,7 +121,7 @@ function course_range(){
                 arrayDiv1[i].className = 'course';
                 
                 // creating courses input tags (course code, credit unit, grade)
-                arrayDiv1[i].innerHTML = '<input type="text" class="code" placeholder="Course code e.g GST 101"> <select name="" class="cu"> <option value="" selected>Select CU</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> </select> <select name="" class="gd"> <option value="" selected>Select grade</option> <option value="5">A</option> <option value="4">B</option> <option value="3">C</option> <option value="2">D</option> <option value="1">E</option> <option value="0">F</option> </select>';
+                arrayDiv1[i].innerHTML = '<input type="text" class="code" placeholder="Course Code e.g GST 101"> <select name="" class="cu"> <option value="" selected>Select CU</option> <option value="1">1</option> <option value="2">2</option> <option value="3">3</option> <option value="6">6</option> </select> <select name="" class="gd"> <option value="" selected>Select Grade</option> <option value="5">A</option> <option value="4">B</option> <option value="3">C</option> <option value="2">D</option> <option value="1">E</option> <option value="0">F</option> </select>';
 
                 // parent div for the above elements
                 new_selection_div = document.querySelector('#co');
